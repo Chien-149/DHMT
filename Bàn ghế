@@ -1,0 +1,206 @@
+bool hienthikinhban = true;
+;
+void Kinhban() {
+
+	Mau(mauDieuhoa);
+	Tao(Translate(0, 0.4, 0) * Scale(18, 0.2, 8));
+}
+void Matban() {
+	//Vien mat ban
+	Tao(Translate(0, 0.2, 3.5) * Scale(18, 0.4, 1));
+	Tao(Translate(0, 0.2, -3.5) * Scale(18, 0.4, 1));
+	Tao(Translate(8.5, 0.2, 0) * Scale(1, 0.4, 6));
+	Tao(Translate(-8.5, 0.2, 0) * Scale(1, 0.4, 6));
+	//Thanh trong mat ban
+	Tao(Translate(0, 0.2, 1.5) * Scale(16, 0.4, 0.5));
+	Tao(Translate(0, 0.2, -1.5) * Scale(16, 0.4, 0.5));
+	Tao(Translate(0, 0.2, 0) * Scale(1, 0.4, 2.5));
+	Tao(Translate(4, 0.2, 0) * Scale(1, 0.4, 2.5));
+	Tao(Translate(-4, 0.2, 0) * Scale(1, 0.4, 2.5));
+
+	Tao(Translate(-6.25, 0.2, 0) * Scale(3.5, 0.4, 0.5));
+	Tao(Translate(-6.25, 0.2, 0.75) * Scale(3.5, 0.4, 0.5));
+	Tao(Translate(-6.25, 0.2, -0.75) * Scale(3.5, 0.4, 0.5));
+
+	Tao(Translate(6.25, 0.2, 0) * Scale(3.5, 0.4, 0.5));
+	Tao(Translate(6.25, 0.2, -0.75) * Scale(3.5, 0.4, 0.5));
+	Tao(Translate(6.25, 0.2, 0.75) * Scale(3.5, 0.4, 0.5));
+
+	Tao(Translate(-2, 0.2, 0) * Scale(3, 0.4, 1));
+	Tao(Translate(2, 0.2, 0) * Scale(3, 0.4, 1));
+}
+void Chanban() {
+	//4 chan
+	Tao(Translate(8.5, -2.6, 3.5) * Scale(1, 5, 1));
+	Tao(Translate(8.5, -2.6, -3.5) * Scale(1, 5, 1));
+	Tao(Translate(-8.5, -2.6, 3.5) * Scale(1, 5, 1));
+	Tao(Translate(-8.5, -2.6, -3.5) * Scale(1, 5, 1));
+	// Cai gi do trong chan
+	Tao(Translate(0, -0.21, 3.5) * Scale(18, 0.4, 1));
+	Tao(Translate(0, -0.21, -3.5) * Scale(18, 0.4, 1));
+	Tao(Translate(8.5, -0.21, 0) * Scale(1, 0.4, 6));
+	Tao(Translate(-8.5, -0.21, 0) * Scale(1, 0.4, 6));
+
+	Tao(Translate(-8.5, -4.2, 0) * Scale(0.6, 0.5, 6));
+	Tao(Translate(8.5, -4.2, 0) * Scale(0.6, 0.5, 6));
+	Tao(Translate(0, -4.2, 3.5) * Scale(16, 0.5, 0.6));
+	Tao(Translate(0, -4.2, -3.5) * Scale(16, 0.5, 0.6));
+
+	Tao(Translate(0, -4.2, 0) * Scale(0.6, 0.5, 4));
+	Tao(Translate(2, -4.2, 0) * Scale(0.6, 0.5, 4));
+	Tao(Translate(4, -4.2, 0) * Scale(0.6, 0.5, 4));
+	Tao(Translate(6.5, -4.2, 0) * Scale(0.6, 0.5, 6.4));
+	Tao(Translate(0, -4.2, 2.2) * Scale(12.5, 0.5, 0.5));
+	Tao(Translate(0, -4.2, -2.2) * Scale(12.5, 0.5, 0.5));
+	Tao(Translate(-2, -4.2, 0) * Scale(0.6, 0.5, 4));
+	Tao(Translate(-4, -4.2, 0) * Scale(0.6, 0.5, 4));
+	Tao(Translate(-6.5, -4.2, 0) * Scale(0.6, 0.5, 6.4));
+}
+void Ban() {
+	control = 1; control2 = 1; control3 = 1;
+	Mau(mauGhesofa);
+	control = Scale(0.35, 0.35, 0.35) * Translate(5.0, -7, -10);
+	Matban();
+	Chanban();
+
+	if (hienthikinhban) {
+		Kinhban();
+
+	}
+	else
+	{
+
+	}
+
+}
+
+
+//GHẾ GỖ (DÀI)
+void Matghe() {
+	Tao(Translate(-0.04, -0.1747, 0) * Scale(1.0971, 0.08, 0.4));
+	Tao(Translate(-0.04, -0.1297, 0) * Scale(1.0971, 0.01, 0.4));
+
+	Tao(Translate(-0.0425, 0.32, 0.175) * Scale(0.9421, 0.015, 0.05));
+	//dung hai ben
+	//benphai
+	Tao(Translate(0.425, 0.08, 0.175) * Scale(0.007, 0.48, 0.05));
+	//bentrai
+	Tao(Translate(-0.5088, 0.08, 0.175) * Scale(0.007, 0.48, 0.05));
+}
+void Tayghe() {
+
+	Tao(Translate(0.46855, -0.1072, -0.1925) * Scale(0.08, 0.4, 0.015));
+	Tao(Translate(0.46855, -0.1072, 0.1925) * Scale(0.08, 0.4, 0.015));
+	Tao(Translate(0.46855, 0.0928, 0) * Scale(0.08, 0.015, 0.4));
+	//dung
+	Tao(Translate(0.46855, -0.13, -0.05) * Scale(0.04, 0.15, 0.015));
+	Tao(Translate(0.46855, -0.01, 0.06) * Scale(0.04, 0.1, 0.015));
+	Tao(Translate(0.46855, 0.005, -0.105) * Scale(0.04, 0.05, 0.015));
+	Tao(Translate(0.46855, -0.005, 0) * Scale(0.04, 0.025, 0.015));
+	//ngang
+	Tao(Translate(0.46855, 0.03, -0.025) * Scale(0.04, 0.015, 0.18));
+	Tao(Translate(0.46855, -0.02, -0.053) * Scale(0.04, 0.015, 0.12));
+	Tao(Translate(0.46855, -0.02, 0.13) * Scale(0.04, 0.015, 0.13));
+	Tao(Translate(0.46855, -0.06, -0.06) * Scale(0.04, 0.015, 0.25));
+}
+void Lungghe() {
+	//benphai
+	Tao(Translate(0.418, 0.08, 0.175) * Scale(0.007, 0.48, 0.05));
+	//bentrai
+	Tao(Translate(0.118, 0.08, 0.175) * Scale(0.007, 0.48, 0.05));
+	//thanh duoi cung
+	Tao(Translate(0.27, -0.09, 0.175) * Scale(0.3, 0.015, 0.05));
+	//tren
+	Tao(Translate(0.27, -0.05, 0.175) * Scale(0.3, 0.015, 0.05));
+	//tren nua
+	Tao(Translate(0.27, -0.01, 0.175) * Scale(0.3, 0.015, 0.05));
+	//tren nua 2
+	Tao(Translate(0.27, 0.22, 0.175) * Scale(0.3, 0.015, 0.05));
+	//lung vuong
+	Tao(Translate(0.21355 + 0.052, 0.105, 0.175) * Scale(0.22, 0.24, 0.05));
+}
+
+GLfloat xGhe = 0.35, yGhe = -0.55, zGhe = -1.5, aGhe = 90.0, bGhe = 0, cGhe = 0;
+void Ghe() {
+	Mau(mauGhesofa);
+	control = Scale(5, 5, 5) * Translate(xGhe, yGhe, zGhe) * RotateY(aGhe) * RotateX(bGhe) * RotateZ(cGhe) * RotateY(90);
+	Matghe();
+	Tayghe();
+
+	Lungghe();
+	control = control * Translate(-0.31, 0, 0);
+	Lungghe();
+	control = control * Translate(-0.31, 0, 0);
+	Lungghe();
+	control = control * Translate(-0.4, 0, 0);
+	Tayghe();
+}
+
+
+//GHẾ GỖ (NGẮN)
+void Matghengan() {
+	Tao(Translate(0.271, -0.1747, 0) * Scale(0.474, 0.08, 0.4));
+	Tao(Translate(0.271, -0.1297, 0) * Scale(0.474, 0.01, 0.4));
+
+	Tao(Translate(0.21355 + 0.058, 0.32, 0.175) * Scale(0.3 + 0.007 + 0.007, 0.015, 0.05));
+	//dung hai ben
+	//bentrai
+	Tao(Translate(0.425, 0.08, 0.175) * Scale(0.007, 0.48, 0.05));
+	//benphai
+	Tao(Translate(0.125, 0.08, 0.175) * Scale(0.007, 0.48, 0.05));
+}
+void Tayghengan() {
+
+	Tao(Translate(0.46855, -0.1072, -0.1925) * Scale(0.08, 0.4, 0.015));//trước
+	Tao(Translate(0.46855, -0.1072, 0.1925) * Scale(0.08, 0.4, 0.015));//sau
+	Tao(Translate(0.46855, 0.0928, 0) * Scale(0.08, 0.015, 0.4));//trên
+	//dung
+	Tao(Translate(0.46855, -0.13, -0.05) * Scale(0.04, 0.15, 0.015));
+	Tao(Translate(0.46855, -0.01, 0.06) * Scale(0.04, 0.1, 0.015));
+	Tao(Translate(0.46855, 0.005, -0.105) * Scale(0.04, 0.05, 0.015));
+	Tao(Translate(0.46855, -0.005, 0) * Scale(0.04, 0.025, 0.015));
+	//ngang
+	Tao(Translate(0.46855, 0.0325, -0.0225) * Scale(0.04, 0.015, 0.18));//trên cùng
+	Tao(Translate(0.46855, -0.02, -0.0525) * Scale(0.04, 0.015, 0.12));//dưới trái
+	Tao(Translate(0.46855, -0.02, 0.13) * Scale(0.04, 0.015, 0.13));//dưới phải
+	Tao(Translate(0.46855, -0.06, -0.059) * Scale(0.04, 0.015, 0.2525));//dưới cùng
+}
+void Lungghengan() {
+	//bentrai
+	Tao(Translate(0.418, 0.08, 0.175) * Scale(0.007, 0.48, 0.05));
+	//benphai
+	Tao(Translate(0.118, 0.08, 0.175) * Scale(0.007, 0.48, 0.05));
+	//thanh duoi cung
+	Tao(Translate(0.27, -0.09, 0.175) * Scale(0.3, 0.015, 0.05));
+	//tren
+	Tao(Translate(0.27, -0.05, 0.175) * Scale(0.3, 0.015, 0.05));
+	//tren nua
+	Tao(Translate(0.27, -0.01, 0.175) * Scale(0.3, 0.015, 0.05));
+	//tren nua 2
+	Tao(Translate(0.27, 0.22, 0.175) * Scale(0.3, 0.015, 0.05));
+	//lung vuong
+	Tao(Translate(0.21355 + 0.052, 0.105, 0.175) * Scale(0.22, 0.24, 0.05));
+}
+GLfloat xGheN = 0.1, yGheN = -0.55, zGheN = -0.59, aGheN = 0.0, bGheN = 90.0, cGheN = 0, zGheN2 = -1.31;
+void Ghengan() {
+	Mau(mauGhesofa);
+	control = 1; control2 = 1; control3 = 1;
+	control = Scale(5, 5, 5) * Translate(-0.2, yGheN, 0.0) * RotateX(aGheN) * RotateY(bGheN) * RotateZ(cGheN) * RotateY(90 + 180);
+	Matghengan();
+	Tayghengan();
+	Lungghengan();
+	control = control * Translate(-0.395, 0, 0);
+	Tayghengan();
+}
+void Ghengan2() {
+	Mau(mauGhesofa);
+
+	control = 1; control2 = 1; control3 = 1;
+	control = Scale(5, 5, 5) * Translate(0.4, yGheN, 0.0)* RotateX(aGheN)* RotateY(bGheN)* RotateZ(cGheN)* RotateY(90 + 180);
+	Matghengan();
+	Tayghengan();
+	Lungghengan();
+	control = control * Translate(-0.395, 0, 0);
+	Tayghengan();
+}
+
