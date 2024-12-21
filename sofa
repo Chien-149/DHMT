@@ -1,0 +1,28 @@
+GLfloat cGoi1 = 0, xGoi1 = 0, yGoi1 = 0, zGoi1 = 0;
+GLfloat cGoi2 = 0, xGoi2 = 0, yGoi2 = 0, zGoi2 = 0;
+void GheSoFaDem() {
+	
+	Mau(vec4(0.529, 0.808, 0.922, 1));
+	control = 1;
+	control2 = 1;
+	control3 = 1;
+
+	control = Translate(15.0, 1.0, 0.0);
+	Tao(Translate(-7.45, -5, 12.8) * Scale(4.5, 1, 2.0));
+	Tao(Translate(-7.45, -4, 14.2) * Scale(4.5, 3, 0.8));
+
+	Tao(Translate(-7.0, -5, 9.8) * Scale(2, 1, 8));
+	Tao(Translate(-5.6, -4, 9.8) * Scale(0.8, 3, 8));
+	//đệm
+	Mau(vec4(0.439, 0.502, 0.565, 1));//màu xám
+	Tao(Translate(-7.5, -4.25, 12.8) * Scale(4.5, 0.5, 2));
+	Tao(Translate(-6.8, -4.25, 9.8) * Scale(2.5, 0.5, 7.8));
+	Tao(Translate(-6.8, -4.25, 6.0) * Scale(2.5, 0.5, 0.3));
+	 
+	//Gối
+	Mau(vec4(1, 0.753, 0.796, 1));
+	Tao(Translate(-6.25, -3.5, 12.3) *Translate(xGoi1, yGoi1, zGoi1) *RotateZ(cGoi1)* Scale(0.3, 1, 1));
+	Tao( Translate(-6.25, -3.5, 8.3) * Translate(xGoi2, yGoi2, zGoi2) * RotateZ(cGoi2) * Scale(0.3, 1, 1));
+	
+
+}
