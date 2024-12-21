@@ -1,0 +1,53 @@
+GLfloat mdieuhoa = 0;
+GLfloat timeDieuhoa = 0.0;   // Thời gian để điều khiển chuyển động
+GLfloat speedDieuhoa = 0.05; // Tốc độ chuyển động
+GLfloat maxMdieuhoa = 45.0;  // Góc mở tối đa
+void UpdateDieuhoa(int value) {
+	timeDieuhoa += speedDieuhoa;
+	mdieuhoa = maxMdieuhoa * sin(timeDieuhoa); // Tính góc bằng sin
+	glutPostRedisplay();                       // Yêu cầu vẽ lại
+	glutTimerFunc(16, UpdateDieuhoa, 0);       // Lặp lại sau 16ms (~60 FPS)
+}
+
+
+void Thanhdieuhoa() {
+	Tao(Scale(1.4, 0.1, 9.8));
+}
+void Mdieuhoa() {
+	control = Translate(1.8, -1.65, 0) * RotateZ(10) * RotateZ(mdieuhoa) * Translate(0.3, -0.05, 0);
+	Thanhdieuhoa();
+}
+void Thandieuhoa() {
+	Tao(Translate(0, 0, 0) * Scale(0.9, 4, 10));
+	Tao(Translate(1.7, 1.62, 0) * RotateZ(-10) * Scale(2.6, 0.3, 10));
+
+	Tao(Translate(0.9, -1.76, 0) * RotateZ(10) * Scale(1, 0.3, 10));
+	//Tao(Translate(2.1, -1.65, 0) * RotateZ(10) * Scale(1.4, 0.1, 10));
+	Tao(Translate(2.9, 0, 0) * Scale(0.2, 3.1, 10));
+
+	Tao(Translate(0, 0, 5) * Scale(0.9, 4, 0.2));
+	Tao(Translate(1.7, 1.62, 5) * RotateZ(-10) * Scale(2.6, 0.3, 0.2));
+	Tao(Translate(1.7, -1.62, 5) * RotateZ(10) * Scale(2.6, 0.3, 0.2));
+	Tao(Translate(2.9, 0, 5) * Scale(0.2, 3.1, 0.2));
+	Tao(Translate(1.2, 0, 5) * Scale(1.6, 3.4, 0.2));
+	Tao(Translate(2.4, 0, 5) * Scale(0.8, 3, 0.2));
+
+	Tao(Translate(0, 0, -5) * Scale(0.9, 4, 0.2));
+	Tao(Translate(1.7, 1.62, -5) * RotateZ(-10) * Scale(2.6, 0.3, 0.2));
+	Tao(Translate(1.7, -1.62, -5) * RotateZ(10) * Scale(2.6, 0.3, 0.2));
+	Tao(Translate(2.9, 0, -5) * Scale(0.2, 3.1, 0.2));
+	Tao(Translate(1.2, 0, -5) * Scale(1.6, 3.4, 0.2));
+	Tao(Translate(2.4, 0, -5) * Scale(0.8, 3, 0.2));
+
+	/*Tao(Translate(1.5, 0.5, 0) * Scale(1,3,10));
+	Tao2(Translate(1.5, -1.5,4.5) * Scale(1,1,1)*RotateZ(-90));
+	Tao2(Translate(1.5, -1.5, -4.5) * Scale(1, 1, 1)*RotateX(180));*/
+}
+void Dieuhoa() {
+	control = 1; control2 = 1; control3 = 1;
+	control3 = Scale(0.4, 0.4, 0.4) * Translate(23.0, 8, 20.0) * RotateY(180.0);
+	Mau(mauDieuhoa);
+	Thandieuhoa();
+	control = Translate(1.8, -1.65, 0) * RotateZ(10) * RotateZ(mdieuhoa) * Translate(0.3, -0.05, 0);
+	Thanhdieuhoa();
+}
